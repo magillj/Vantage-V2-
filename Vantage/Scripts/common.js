@@ -1,0 +1,1 @@
+﻿/* Common functions used by multiple javascript pages */
