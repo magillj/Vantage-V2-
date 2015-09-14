@@ -1,9 +1,27 @@
 ﻿@{
     ViewBag.Title = "Duties Sheet";
 }
+@model Vantage.Models.DutySheetViewModel
 @section PageScripts
 {
     <script src="@Url.Content("~/Scripts/dutySheet.js")"></script>
 }
-<h2>DutiesSheet</h2>
+@section PageStyles
+{
 
+}
+
+<div>
+    <h1>@ViewBag.Title</h1>
+</div>
+
+<div>
+    <p>Here's some data from the model: @Model.TestVar</p>
+    <h3>Check out this list from the model:</h3>
+    <ul>
+        @foreach (var s in Model.TestList)
+        {
+            <li>@s</li>
+        }
+    </ul>
+</div>

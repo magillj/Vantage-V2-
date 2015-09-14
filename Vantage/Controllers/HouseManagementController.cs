@@ -3,24 +3,31 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Vantage.Data;
+using Vantage.Models;
 
 namespace Vantage.Controllers
 {
     public class HouseManagementController : Controller
     {
-        // GET: HouseManagement
+        // GET: HouseManagement or HouseManagement/Index
         public ActionResult Index()
         {
             // TODO: Make a home page for House Management
-            return View("HouseManagementHome");
+            //return View("HouseManagementHome");
+            return new HttpStatusCodeResult(400, "Page not created yet");
         }
 
-        public ActionResult Get(string id)
+        // GET: HouseManagement/DutySheet
+        public ActionResult DutySheet()
         {
-            if (id.Equals("DutySheet"))
+            DutySheetViewModel viewModel = new DutySheetViewModel()
             {
-                return View("DutySheet");
-            }
+                TestVar = "Hello, world!",
+                TestList = DummyHouseManagementData.GetTestList()
+            };
+
+            return View("DutySheet", viewModel);
         }
     }
 }
