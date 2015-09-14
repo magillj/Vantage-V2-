@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Vantage.Data
 {
-    public static class DummyHouseManagementData
+    public static class HouseManagementData
     {
         // Return any data that may be needed regarding the duty sheet
         public static List<string> GetTestList()
