@@ -172,12 +172,15 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\HouseManagementController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Data\DummyHouseManagementData.cs" />
+    <Compile Include="Data\HomeData.cs" />
+    <Compile Include="Data\HouseManagementData.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\AnnouncementModel.cs" />
     <Compile Include="Models\DutySheetViewModel.cs" />
+    <Compile Include="Models\HomeViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

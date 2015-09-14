@@ -1,31 +1,49 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
+@model Vantage.Models.HomeViewModel
 
 <div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+    <h1>Welcome to Vantage</h1>
+    <p class="lead">Vantage is the website intended to manage the internal affairs of the Phi Kappa Psi fraternity. These include things like duties, fines, and house points.</p>
+    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Don't click me &raquo;</a></p>
 </div>
+
+<div>
+    <h3>Important Announcements</h3>
+    <ul class="list-group announcements">
+        @foreach (var a in Model.Announcements)
+        {
+            if (a.IsCritical)
+            {
+                <li class="list-group-item criticalAnnouncement">@a.Title</li>
+            }
+            else
+            {
+                <li class="list-group-item">@a.Title</li>
+            }
+            // TODO: have it so that when clicked, the body is shown
+        }
+    </ul>
+</div>
+
 
 <div class="row">
     <div class="col-md-4">
-        <h2>Getting started</h2>
+        <h2>House Management</h2>
         <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
+            Because the house is always so clean and nothings ever broken
         </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+        <p><a class="btn btn-default" href="/HouseManagement/DutySheet">Duties Sheet &raquo;</a></p>
     </div>
     <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+        <h2>Information</h2>
+        <p>Fines, house points, house directory, notes from the Executive Board</p>
+        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Fines &raquo;</a></p>
     </div>
     <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+        <h2>Message Boards</h2>
+        <p>Lost and found, washing machine posts, and other specific bullshit that keeps clogging up the house group</p>
+        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">See the list &raquo;</a></p>
     </div>
 </div>
