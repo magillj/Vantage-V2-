@@ -24,7 +24,7 @@ namespace Vantage.Controllers
             DutySheetViewModel viewModel = new DutySheetViewModel()
             {
                 TestVar = "Hello, world!",
-                TestList = DummyHouseManagementData.GetTestList()
+                TestList = HouseManagementData.GetTestList()
             };
 
             return View("DutySheet", viewModel);
