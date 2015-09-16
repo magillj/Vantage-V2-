@@ -24,16 +24,16 @@
             <th>Initiation</th>
             <th>Phone Number</th>
         </tr>
-        <tr>
             @foreach (var s in Model.Members)
             {
-                <td>@s.FirstName</td>
-                <td>@s.LastName</td>
-                <td>@s.Email</td>
-                <td>@s.Initiation...</td>
-                <td>@s.PhoneNumber</td>
+                <tr>
+                    <td>@s.FirstName</td>
+                    <td>@s.LastName</td>
+                    <td>@s.Email</td>
+                    <td>@s.Initiation...</td>
+                    <td>@s.PhoneNumber</td>
+                </tr>
             }
-        </tr>
     </table>
 </div>
 

@@ -132,7 +132,9 @@ namespace Vantage.Data
             return new List<Member>()
             {
                 new Member("Derek", "Coley", "dmcoley@uw.edu",
-                "Computer Science", "1782")
+                            "425-422-2063", "1782"),
+                new Member("Jake", "Magill", "solidmagill@gmail.com",
+                            "999-999-9999", "1763")
             };
         }
     }

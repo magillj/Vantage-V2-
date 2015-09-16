@@ -13,11 +13,11 @@ namespace Vantage.Data
         {
             return new List<string>()
             {
-                "Derek Sucks 1",
-                "Derek Sucks 2",
-                "Derek Sucks 3",
-                "Derek Sucks 4",
-                "Derek Sucks 5"
+                "Jake Sucks 1",
+                "Jake Sucks 2",
+                "Jake Sucks 3",
+                "Jake Sucks 4",
+                "Jake Sucks 5"
             };
         }
 

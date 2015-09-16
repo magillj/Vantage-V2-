@@ -27,8 +27,11 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Duties", "DutySheet", "HouseManagement")</li>
                     <li>@Html.ActionLink("Directory", "Directory", "Info")</li>
+                    <li>@Html.ActionLink("Duties", "DutySheet", "HouseManagement")</li>
+                    <li>@Html.ActionLink("Fines", "Fines", "HouseManagement")</li>
+                    <li>@Html.ActionLink("House Points", "HousePoints", "HouseManagement")</li>
+                    <li>@Html.ActionLink("Message Board", "MessageBoard", "Info")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
@@ -38,7 +41,9 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - PKP Vantage</p>
+            <p>&copy; @DateTime.Now.Year - PKP Vantage
+            <span style="float:right">Developed by Derek Coley, Jake Magill</span> 
+            </p>
         </footer>
     </div>
 
