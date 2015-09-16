@@ -182,6 +182,7 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AnnouncementModel.cs" />
     <Compile Include="Models\DirectoryViewModel.cs" />
+    <Compile Include="Models\DutyModel.cs" />
     <Compile Include="Models\DutySheetViewModel.cs" />
     <Compile Include="Models\HomeViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
