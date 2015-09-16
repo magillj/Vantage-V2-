@@ -122,7 +122,7 @@ namespace Vantage.Data
             for (var i = 0; i < count; i++)
             {
                 result.Add(new Member(data[0][i], data[1][i],
-                    data[2][i], data[3][i], data[4][i]));
+                    data[2][i], data[4][i], data[3][i]));
             }
             return result;
         }
