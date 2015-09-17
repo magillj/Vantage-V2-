@@ -12,6 +12,7 @@ namespace Vantage.Models
         public string Title { get; set; }
         public string Description { get; set; }
         public DutyStatus[] Performance { get; set; }
+        public DateTime LastCheckIn { get; set; }
     }
 
     public enum DutyStatus

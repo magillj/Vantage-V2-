@@ -26,7 +26,7 @@
                 <th>Sunday</th>
                 <th>Monday</th>
                 <th>Tuesday</th>
-                <th>Wednesday</th>
+                <th>Wednes</th>
                 <th>Thursday</th>
                 <th>Friday</th>
                 <th>Saturday</th>
@@ -35,9 +35,9 @@
         
         @foreach (var d in Model.Duties)
         {
-            <tr title="@d.Description">
-                <td>@d.Id</td>
-                <td>@d.Title</td>
+            <tr>
+                <td title="@d.Description">@d.Id</td>
+                <td title="@d.Description">@d.Title</td>
                 <td>@d.AssigneeId</td>
                 @for (var i = 0; i < 7; i++)
                 {
@@ -46,10 +46,26 @@
                     {
                         performanceClasses += " todaysPerformance";
                     }
-                    
-                    <td class="@performanceClasses"></td>
+                    if (d.Performance[i].ToString() == "Incomplete")
+                    {
+                        if (i == Model.WeekDay)
+                        {
+                            <td class="@performanceClasses"><button class="btn btn-default">Done</button></td>
+                        }
+                        else
+                        {
+                            <td class="@performanceClasses"><button class="btn btn-default"  disabled>Done</button></td>
+                        }
+                    }
+                    else if (d.Performance[i].ToString() == "Complete")
+                    {
+                        <td class="@performanceClasses">@d.LastCheckIn.ToString("hh:mm tt")</td>
+                    }
+                    else
+                    {
+                        <td class="@performanceClasses"></td>
+                    }
                 }
-                <td></td>
             </tr>
         }
     </table>

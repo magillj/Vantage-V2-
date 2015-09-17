@@ -1,1 +1,3 @@
-﻿
+﻿function updateDuty(id, status) {
+
+}

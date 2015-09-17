@@ -3,6 +3,12 @@
     border-right: 1px solid #dddddd;
     background-repeat: no-repeat;
     background-position: center;
+    height: 50px;
+    width: 77px;
+}
+
+.dutyPerformance button.btn {
+    outline: none;
 }
 
 .dutyStatus_MajorFail {
@@ -17,12 +23,11 @@
     background-image: none;
 }
 
-.dutyStatus_Incomplete.todaysPerformance {
-    cursor: pointer;
+.todaysPerformance {
 }
 
 .dutyStatus_Complete {
-    background-color: lightgreen;
+    background-color: #E6FAE6;
 }
 
 .dutyStatus_Passed {
