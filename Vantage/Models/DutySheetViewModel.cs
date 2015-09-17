@@ -8,8 +8,7 @@ namespace Vantage.Models
 {
     public class DutySheetViewModel
     {
-        // TODO: load with information needed on the duty sheet page
-        public string TestVar { get; set; }
-        public List<string> TestList { get; set; } 
+        public int WeekDay { get; set;  }
+        public List<DutyModel> Duties { get; set; }
     }
 }

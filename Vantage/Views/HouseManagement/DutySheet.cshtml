@@ -8,7 +8,7 @@
 }
 @section PageStyles
 {
-
+    <link href="~/Content/DutySheet.css" type="text/css" rel="stylesheet" />
 }
 
 <div>
@@ -16,12 +16,41 @@
 </div>
 
 <div>
-    <p>Here's some data from the model: @Model.TestVar</p>
-    <h3>Check out this list from the model:</h3>
-    <ul>
-        @foreach (var s in Model.TestList)
+    <h3>Duties Sheet</h3>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Duty</th>
+                <th>Title</th>
+                <th>Assignee</th>
+                <th>Sunday</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+                <th>Saturday</th>
+            </tr>
+        </thead>
+        
+        @foreach (var d in Model.Duties)
         {
-            <li>@s</li>
+            <tr title="@d.Description">
+                <td>@d.Id</td>
+                <td>@d.Title</td>
+                <td>@d.AssigneeId</td>
+                @for (var i = 0; i < 7; i++)
+                {
+                    var performanceClasses = "dutyPerformance dutyStatus_" + d.Performance[i];
+                    if (i == Model.WeekDay)
+                    {
+                        performanceClasses += " todaysPerformance";
+                    }
+                    
+                    <td class="@performanceClasses"></td>
+                }
+                <td></td>
+            </tr>
         }
-    </ul>
+    </table>
 </div>

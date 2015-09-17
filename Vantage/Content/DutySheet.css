@@ -1,0 +1,30 @@
+﻿.dutyPerformance {
+    border-left: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.dutyStatus_MajorFail {
+    background-image: url("/Resources/MajorFailed.png");
+}
+
+.dutyStatus_MinorFail {
+    background-image: url("/Resources/MinorFailed.png");
+}
+
+.dutyStatus_Incomplete {
+    background-image: none;
+}
+
+.dutyStatus_Incomplete.todaysPerformance {
+    cursor: pointer;
+}
+
+.dutyStatus_Complete {
+    background-color: lightgreen;
+}
+
+.dutyStatus_Passed {
+    background-image: url("/Resources/Passed.png");
+}

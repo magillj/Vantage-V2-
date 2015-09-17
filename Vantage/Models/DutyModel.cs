@@ -8,6 +8,7 @@ namespace Vantage.Models
     public class DutyModel
     {
         public int Id { get; set; }
+        public int AssigneeId { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
         public DutyStatus[] Performance { get; set; }

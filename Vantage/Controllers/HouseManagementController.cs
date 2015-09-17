@@ -23,11 +23,27 @@ namespace Vantage.Controllers
         {
             DutySheetViewModel viewModel = new DutySheetViewModel()
             {
-                TestVar = "Hello, world!",
-                TestList = HouseManagementData.GetTestList()
+                Duties = HouseManagementData.GetDuties(),
+                WeekDay = ConvertDayOfWeekToInt(DateTime.Now.DayOfWeek)
             };
 
             return View("DutySheet", viewModel);
+        }
+
+        // Converts the week day to a number used by the Duty Models
+        private int ConvertDayOfWeekToInt(DayOfWeek day)
+        {
+            switch (day)
+            {
+                case DayOfWeek.Sunday: return 0;
+                case DayOfWeek.Monday: return 1;
+                case DayOfWeek.Tuesday: return 2;
+                case DayOfWeek.Wednesday: return 3;
+                case DayOfWeek.Thursday: return 4;
+                case DayOfWeek.Friday: return 5;
+                case DayOfWeek.Saturday: return 6;
+                default: throw new ArgumentException("Day of week invalid");
+            }
         }
     }
 }
