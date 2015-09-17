@@ -6,7 +6,7 @@
 <div class="jumbotron">
     <h1>Welcome to Vantage</h1>
     <p class="lead">Vantage is the website intended to manage the internal affairs of the Phi Kappa Psi fraternity. These include things like duties, fines, and house points.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Don't click me &raquo;</a></p>
+    <!-- <p><a href="http://asp.net" class="btn btn-primary btn-lg">Don't click me &raquo;</a></p> -->
 </div>
 <div>
     <h3>Important Announcements</h3>
@@ -39,12 +39,12 @@
         <p>Fines, house points, house directory, notes from the Executive Board</p>
         <table>
             <tr>
-                <td><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Fines &raquo;</a></td>
-                <td><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Points &raquo;</a></td>
+                <td><a class="btn btn-default" href="/HouseManagement/Fines">Fines &raquo;</a></td>
+                <td><a class="btn btn-default" href="/HouseManagement/HousePoints">Points &raquo;</a></td>
             </tr>
             <tr>
-                <td><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Notes &raquo;</a></td>
-                <td><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Directory &raquo;</a></td>
+                <td><a class="btn btn-default" onclick="showCommonModal('@HttpUtility.JavaScriptStringEncode("hi")', '@HttpUtility.JavaScriptStringEncode("Jake Sucks")')">Notes &raquo;</a></td>
+                <td><a class="btn btn-default" href="/Info/Directory">Directory &raquo;</a></td>
             </tr>
         </table>
     </div>
@@ -52,8 +52,8 @@
         <h2>Message Boards</h2>
         <p>Lost and found, washing machine posts, and other specific bullshit that keeps clogging up the house group</p>
         <p>
-            <a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">See the list &raquo;</a>
+            <a class="btn btn-default" href="/Info/MessageBoard">See the list &raquo;</a>
         </p>
     </div>
 </div>
-@Html.Partial("ModalPartial");
+@Html.Partial("ModalPartial")

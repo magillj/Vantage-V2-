@@ -45,5 +45,17 @@ namespace Vantage.Controllers
                 default: throw new ArgumentException("Day of week invalid");
             }
         }
+
+        public ActionResult HousePoints()
+        {
+            HousePointsViewModel viewModel = new HousePointsViewModel();
+            return View("HousePoints", viewModel);
+        }
+
+        public ActionResult Fines()
+        {
+            FinesViewModel viewModel = new FinesViewModel();
+            return View("Fines", viewModel);
+        }
     }
 }

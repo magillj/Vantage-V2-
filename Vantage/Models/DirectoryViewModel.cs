@@ -10,5 +10,6 @@ namespace Vantage.Models
     {
         // TODO: load with information needed on the directory
         public string TestVar { get; set; }
+        public List<Data.InformationData.Member> Members { get; set; }
     }
 }

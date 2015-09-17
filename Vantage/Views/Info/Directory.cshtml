@@ -16,10 +16,24 @@
 </div>
 
 <div>
-    <table>
+    <table id="directory">
         <tr>
-            <td><@Model.TestVar</td>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>E-mail</th>
+            <th>Initiation</th>
+            <th>Phone Number</th>
         </tr>
+            @foreach (var s in Model.Members)
+            {
+                <tr>
+                    <td>@s.FirstName</td>
+                    <td>@s.LastName</td>
+                    <td>@s.Email</td>
+                    <td>@s.Initiation</td>
+                    <td>@s.PhoneNumber</td>
+                </tr>
+            }
     </table>
 </div>
 
