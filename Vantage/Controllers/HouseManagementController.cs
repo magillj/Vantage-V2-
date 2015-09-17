@@ -30,6 +30,18 @@ namespace Vantage.Controllers
             return View("DutySheet", viewModel);
         }
 
+        public ActionResult HousePoints()
+        {
+            HousePointsViewModel viewModel = new HousePointsViewModel();
+            return View("HousePoints", viewModel);
+        }
+
+        public ActionResult Fines()
+        {
+            FinesViewModel viewModel = new FinesViewModel();
+            return View("Fines", viewModel);
+        }
+
         // Converts the week day to a number used by the Duty Models
         private int ConvertDayOfWeekToInt(DayOfWeek day)
         {
@@ -44,18 +56,6 @@ namespace Vantage.Controllers
                 case DayOfWeek.Saturday: return 6;
                 default: throw new ArgumentException("Day of week invalid");
             }
-        }
-
-        public ActionResult HousePoints()
-        {
-            HousePointsViewModel viewModel = new HousePointsViewModel();
-            return View("HousePoints", viewModel);
-        }
-
-        public ActionResult Fines()
-        {
-            FinesViewModel viewModel = new FinesViewModel();
-            return View("Fines", viewModel);
         }
     }
 }

@@ -25,9 +25,7 @@ namespace Vantage.Controllers
             DirectoryViewModel viewModel = new DirectoryViewModel()
             {
                 TestVar = "Hello, world!",
-                // TODO: Fix directory!!!
-                Members = InformationData.GetMembers("Directory.txt")
-                // Members = InformationData.GetTestMembers()
+                Members = InformationData.GetMembers()
             };
             return View("Directory", viewModel);
         }
